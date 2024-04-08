@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Page</title>
+    <link rel="stylesheet" href="css/styles-6.css">
+</head>
+<body>
+    <!-- Header with CSS-based navigation -->
+    <header>
+        <h1>Reviews</h1>
+        <nav>
+            <ul>
+                <li><a href="../html-project/homepage.html"><strong>Home</strong></a></li>
+                <li><a href="../html-project/products.html"><strong>Products</strong></a></li>
+                <li><a href="../html-project/reviews.html"><strong>Reviews</strong></a></li>
+                <li><a href="../html-project/about.html"><strong>About</strong></a></li>
+                <li><a href="../html-project/contact us.html"><strong>Contact Us</strong></a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Feedback Display -->
+    <section id="feedbackDisplay">
+        <h2>Feedbacks</h2>
+        <div id="feedbacks">
+            <p><strong>Name:</strong> Lovedeep Garg</p>
+            <p><strong>Rating:</strong> 5</p>
+            <p><strong>Comment:</strong> Hi, I purchased the pen and used it. Believe me, I had an excellent experience.</p>
+            <p><strong>Name:</strong> Varun Khunger</p>
+            <p><strong>Rating:</strong> 4</p>
+            <p><strong>Comment:</strong> The delivery was very fast and when I wrote with the pen, I felt good.</p>
+            <p><strong>Name:</strong> Deepinder Singh</p>
+            <p><strong>Rating:</strong> 5</p>
+            <p><strong>Comment:</strong> I bought one pen from them and almost every friend asked me about it.</p>
+            <p><strong>Name:</strong>Harsh Jast</p>
+            <p><strong>Rating:</strong> 4.75</p>
+            <p><strong>Comment:</strong> Nice Pen.</p>
+            
+            <!-- Feedback will be displayed here -->
+        </div>
+    </section>
+
+    <!-- Feedback Form -->
+    <section id="feedbackFormSection">
+        <h2>Feedback Form</h2>
+        <form id="feedbackForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="rating">Rating:</label>
+                <select id="rating" name="rating" required>
+                    <option value="">Select Rating</option>
+                    <option value="1">1 Star</option>
+                    <option value="2">2 Stars</option>
+                    <option value="3">3 Stars</option>
+                    <option value="4">4 Stars</option>
+                    <option value="5">5 Stars</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="comment">Comment:</label>
+                <textarea id="comment" name="comment" rows="4" required></textarea>
+            </div>
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Vintage Fountain Pens. All rights reserved.</p>
+        <div class="social-media">
+            <a href="../Desktop/html-project/images/facebook-icon.jpg" class="icon-facebook"></a>
+            <a href="../Desktop/html-project/images/twitter-icon.jpg" class="icon-twitter"></a>
+            <a href="../Desktop/html-project/images/instagram-icon.jpg" class="icon-instagram"></a>
+        </div>
+    </footer>
+
+    <!-- JavaScript for handling form submission and displaying feedback -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Get form and feedback display elements
+            const form = document.getElementById('feedbackForm');
+            const feedbackDisplay = document.getElementById('feedbacks');
+
+            // Event listener for form submission
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent default form submission
+
+                // Get form values
+                const name = form.elements.name.value;
+                const rating = form.elements.rating.value;
+                const comment = form.elements.comment.value;
+
+                // Create feedback message
+                const feedbackMessage = `<div class="feedback">
+                                            <p><strong>Name:</strong> ${name}</p>
+                                            <p><strong>Rating:</strong> ${rating}</p>
+                                            <p><strong>Comment:</strong> ${comment}</p>
+                                        </div>`;
+
+                // Display feedback message below the form
+                feedbackDisplay.insertAdjacentHTML('beforeend', feedbackMessage);
+
+                // Clear form inputs
+                form.reset();
+            });
+        });
+    </script>
+</body>
+</html>

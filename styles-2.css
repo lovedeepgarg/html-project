@@ -1,0 +1,157 @@
+/* styles-2.css */
+
+/* Ensure the body takes up the full height of the viewport */
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif; /* Apply font-family to the entire document */
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Define the header styles */
+  header {
+    background-image: url('../images/image1.jpg'); /* Update the background image path */
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    height: 200px; /* Adjust the height as needed */
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Styling for header h1 */
+  header h1 {
+    margin: 0;
+    margin-bottom: 60px;
+  }
+  
+  /* Styling for navigation */
+  nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    color: #fff; /* Change link color */
+    text-decoration: none;
+    padding: 5px 10px; /* Add padding to links */
+    border-radius: 5px; /* Add rounded corners */
+    transition: background-color 0.3s; /* Add smooth transition */
+  }
+  
+  /* Hover effect for navigation links */
+  nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Add hover effect */
+  }
+  
+  /* Define the main content area */
+  main {
+    padding: 20px;
+    padding-bottom: 90px; /* Adjusted to accommodate the footer height */
+    min-height: calc(100vh - 90px); /* Subtract the height of the header and footer */
+  }
+  
+  /* Define the contact form styles */
+  .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .contact-form h2 {
+    text-align: center;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input[type="text"],
+.form-group input[type="email"]{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .form-group textarea {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+  }
+  
+  button[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #555;
+  }
+  
+  /* Define the footer styles */
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 98%;
+    height: 60px; /* Adjust as needed */
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between; /* Align content and icons to opposite ends */
+    align-items: center; /* Vertically center content and icons */
+    padding: 0 20px; /* Add padding to separate content and icons */
+  }
+  
+  h5 {
+    margin: 0; /* Remove default margin */
+  }
+  
+  .social-media {
+    text-align: center; /* Align icons to the right */
+  }
+  
+  .social-media a {
+    display: inline-block; /* Display icons as inline-block elements */
+    margin-left: 10px; /* Add margin between icons */
+    width: 40px; /* Set the width of icons */
+    height: 40px; /* Set the height of icons */
+    border-radius: 50%; /* Make the icons circular */
+    background-size: cover; /* Make sure the background image covers the entire area */
+  }
+  
+  .icon-facebook {
+    background-image: url("../images/facebook-icon.jpg"); /* Set the background image for Facebook icon */
+  }
+  
+  .icon-twitter {
+    background-image: url("../images/twitter-icon.jpg"); /* Set the background image for Twitter icon */
+  }
+  
+  .icon-instagram {
+    background-image: url("../images/instagram-icon.jpg"); /* Set the background image for Instagram icon */
+  }
+  .faqs p {
+    margin-top: 25px;
+    line-height: 1.5; /* Adjust the value to increase or decrease spacing */
+  }

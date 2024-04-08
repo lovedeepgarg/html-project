@@ -1,0 +1,146 @@
+/* Resetting default styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Header styles */
+header {
+  background-image: url('../images/image1.jpg'); /* Update the background image path */
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  height: 200px; /* Adjust the height as needed */
+  color: white;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styling for header h1 */
+header h1 {
+  margin: 0;
+  margin-bottom: 60px;
+}
+
+/* Styling for navigation */
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #fff; /* Change link color */
+  text-decoration: none;
+  padding: 5px 10px; /* Add padding to links */
+  border-radius: 5px; /* Add rounded corners */
+  transition: background-color 0.3s; /* Add smooth transition */
+}
+
+/* Hover effect for navigation links */
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Add hover effect */
+}
+/* Main content styles */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.product-details, .purchase-form {
+  margin: 0 20px;
+}
+
+/* Adjusting image size */
+.product-image img {
+  max-width: 100%;
+  height: auto;
+  width: 1%; /* Adjust the width as needed */
+  height: 253px; /* Adjust the height as needed */
+}
+
+/* Form styles */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea,
+.form-group input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Button styles */
+button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+/* Footer styles */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 98%;
+  height: 60px;
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+h5 {
+  margin: 0;
+}
+
+/* Social media icon styles */
+.social-media {
+  text-align: center;
+}
+
+.social-media a {
+  display: inline-block;
+  margin-left: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-size: cover;
+}
+
+.icon-facebook {
+  background-image: url("../images/facebook-icon.jpg");
+}
+
+.icon-twitter {
+  background-image: url("../images/twitter-icon.jpg");
+}
+
+.icon-instagram {
+  background-image: url("../images/instagram-icon.jpg");
+}

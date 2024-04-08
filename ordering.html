@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORDERING</title>
+    <link rel="stylesheet" href="css/styles-5.css">
+</head>
+
+<body>
+    <header>
+        <h1>ORDERING</h1>
+        <nav>
+            <ul>
+              <strong>
+                <li><a href="../html-project/homepage.html"><strong>Home</strong></a></li>
+                <li><a href="../html-project/products.html"><strong>Products</strong></a></li>
+                <li><a href="../html-project/reviews.html"><strong>Reviews</strong></a></li>
+                <li><a href="../html-project/about.html"><strong>About</strong></a></li>
+                <li><a href="../html-project/contact us.html"><strong>Contact Us</strong></a></li><!-- Updated anchor tag -->
+            </strong>
+            </ul>
+          </nav>
+    </header>
+    <main>
+        <section class="product-details" id="productDetails">
+            <h2>Product Details</h2>
+            <div class="product-image">
+               
+            </div>
+            <div class="product-info">
+                <!-- <h3>Waterman 0552 1/2 Fountain Pen</h3>
+                <p>-14kt gold nib-Fine-Medium-flexible</p>
+                <p>Price: $649.99</p> -->
+            </div>
+        </section>
+        <section class="purchase-form">
+            <h2>Shipping Details</h2>
+            <form action="checkout.php" method="post">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address:</label>
+                    <textarea id="address" name="address" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" value="1" min="1" required>
+                </div>
+                <!-- form> -->
+                <!-- Your form content goes here -->
+                <a href="../html-project/ordered.html" id="checkoutLink">
+                    <button type="submit">Proceed to Checkout</button>
+                </a>
+            </form>
+        </section>
+    </main>
+    <footer>
+
+        <h5>&copy; 2024 Product Company. All rights reserved. </h5>
+        <aside>
+            <div class="social-media">
+
+                <a href="../Desktop/html-project/images/facebook-icon.jpg" class="icon-facebook"></a>
+                <a href="../Desktop/html-project/images/twitter-icon.jpg" class="icon-twitter"></a>
+                <a href="../Desktop/html-project/images/instagram-icon.jpg" class="icon-instagram"></a>
+        </aside>
+
+        <!-- Additional social media icons -->
+        </div>
+    </footer>
+    <script>
+        document.getElementById("checkoutLink").addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent the default link behavior
+
+            // Check if all required fields are filled
+            var name = document.getElementById("name").value.trim();
+            var email = document.getElementById("email").value.trim();
+            var address = document.getElementById("address").value.trim();
+            var quantity = document.getElementById("quantity").value.trim();
+
+            // Check if any required field is empty
+            if (name === "" || email === "" || address === "" || quantity === "") {
+                alert("Please fill in all required fields."); // Display an alert message
+            } else {
+                window.location.href = "../html-project/ordered.html"; // Redirect to ordered.html
+            }
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Function to get URL parameters
+            function getUrlParameter(name) {
+                name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+                var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+                var results = regex.exec(location.search);
+                return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+            }
+
+            // Get the product identifier and image URL from the URL
+            var productId = getUrlParameter('product');
+            var imageUrl = getUrlParameter('image');
+
+            // Use the product identifier to display the corresponding product details
+            if (productId === '1') {
+                // Display product 1 details
+                displayProductDetails("Vintage black Waterman 54 fountain pen", "-14kt gold nib-Fine-Medium-flexible", "$649.99", imageUrl);
+            } else if (productId === '2') {
+                // Display product 2 details
+                displayProductDetails("Waterman 0552 1/2 Fountain Pen", "-Gold Filled Trefoil Filigree, Flexible Fine Ideal Nib (Excellent, Restored)", "$149.99", imageUrl);
+            } else if (productId === '3') {
+                // Display product 3 details
+                displayProductDetails("Waterman 52 Fountain Pen", "- Red Ripple with GF Trim, Fine Flexible Ideal Nib (Superior, Restored)", "$300.99", imageUrl);
+            }else if (productId === '4') {
+                // Display product 4 details
+                displayProductDetails("Antique Fountain Pen", "- Vintage from the 1980s", "$649.99", imageUrl);
+            }
+            else if (productId === '5') {
+                // Display product 5 details
+                displayProductDetails("Master Vintage Fountain Pen", "- Japan, 1950s, Red Tan Spiral, 14k Semi-Flex Nib (Very Nice, Restored)", "$130.99", imageUrl);
+            }
+            else if (productId === '6') {
+                // Display product 6 details
+                displayProductDetails("Vintage 14k Gold Filled Fountain Pen", "- 14K Gold Nib 1930s Art Deco 14K Gold Filled Fountain Pen With Elegant Etched Pattern", "$199.99", imageUrl);
+            }
+
+            // Repeat this for other products
+
+            // Function to display product details
+            function displayProductDetails(name, description, price, imageUrl) {
+                var productDetails = document.getElementById('productDetails');
+                productDetails.innerHTML = `
+                <img src="${imageUrl}" alt="${name}">
+                <h2>${name}</h2>
+                <p>${description}</p>
+                <p>Price: ${price}</p>`;
+            }
+        });
+    </script>
+
+</body>
+
+</html>

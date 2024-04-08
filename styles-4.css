@@ -1,0 +1,147 @@
+/* styles.css */
+
+/* Reset default margin and padding */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header styling */
+header {
+  background-image: url('../images/image1.jpg'); /* Update the background image path */
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  height: 200px; /* Adjust the height as needed */
+  color: white;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styling for header h1 */
+header h1 {
+  margin: 0;
+  margin-bottom: 60px;
+}
+
+/* Styling for navigation */
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #fff; /* Change link color */
+  text-decoration: none;
+  padding: 5px 10px; /* Add padding to links */
+  border-radius: 5px; /* Add rounded corners */
+  transition: background-color 0.3s; /* Add smooth transition */
+}
+
+/* Hover effect for navigation links */
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Add hover effect */
+}
+
+/* Main section styling */
+main {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Styling for product sections */
+.product {
+  width: 300px;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.product img {
+  width: 300px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  max-height: 253px;
+}
+
+.product h2 {
+  margin-top: 0;
+}
+
+/* Button styling */
+.product button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Add smooth transition */
+  font-weight: bold; /* Add font weight */
+  text-transform: uppercase; /* Convert text to uppercase */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow */
+}
+
+/* Hover effect for buttons */
+.product button:hover {
+  background-color: #555; /* Change button color on hover */
+}
+
+/* Footer styling */
+footer {
+  position: relative;
+  bottom: 0;
+  width: 98%;
+  height: 60px; /* Adjust as needed */
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between; /* Align content and icons to opposite ends */
+  align-items: center; /* Vertically center content and icons */
+  padding: 0 20px; /* Add padding to separate content and icons */
+}
+
+/* Remove default margin for footer h5 */
+h5 {
+  margin: 0;
+}
+
+/* Styling for social media icons */
+.social-media {
+  text-align: center; /* Align icons to the right */
+}
+
+.social-media a {
+  display: inline-block; /* Display icons as inline-block elements */
+  margin-left: 10px; /* Add margin between icons */
+  width: 40px; /* Set the width of icons */
+  height: 40px; /* Set the height of icons */
+  border-radius: 50%; /* Make the icons circular */
+  background-size: cover; /* Make sure the background image covers the entire area */
+}
+
+/* Facebook icon */
+.icon-facebook {
+  background-image: url("../images/facebook-icon.jpg");
+}
+
+/* Twitter icon */
+.icon-twitter {
+  background-image: url("../images/twitter-icon.jpg");
+}
+
+/* Instagram icon */
+.icon-instagram {
+  background-image: url("../images/instagram-icon.jpg");
+}
